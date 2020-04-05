@@ -1,6 +1,6 @@
-# adda-code-test-front
+# ADDA CODE TEST FRONT PARTIAL
 The code in response to test 'Coding challenge for Sr Software Engineer (Frontend)/Technical Lead (UI and Graphics)'
-ref: 'https://bitbucket.org/idda/coding-challenges/src/master/Sr-Software-Engineer-FE.md'
+ref: https://bitbucket.org/idda/coding-challenges/src/master/Sr-Software-Engineer-FE.md
 ## Project setup
 ```
 npm run install
