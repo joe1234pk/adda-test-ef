@@ -2,15 +2,15 @@
   <div class="my-5">
     <h3>Filter</h3>
     <div class="my-3">
-      <b-form-group label="ID">
+      <b-form-group label="ID" id="id_form_group">
         <VueSelect :options="ids" label="select" v-model="selectedId" :searchable="true"></VueSelect>
       </b-form-group>
 
-      <b-form-group label="Category">
+      <b-form-group label="Category" id="category_form_group">
         <VueSelect :options="categories" label="select" v-model="selectedCategories"></VueSelect>
       </b-form-group>
       <b-form-group label="Status">
-        <b-form-checkbox-group id="satus-checkbox-group" v-model="selectedStatues" >
+        <b-form-checkbox-group id="status_checkbox_group" v-model="selectedStatues" >
           <b-form-checkbox :value="status" v-for="status in statues" :key="status">{{status}}</b-form-checkbox>
         </b-form-checkbox-group>
       </b-form-group>

@@ -8,10 +8,10 @@
             :ids="ids"
             :statues="statues"
             @update-filter="updateFilter"
-          ></Sidebar>
+          />
         </b-col>
         <b-col cols="9">
-          <Map :geoData="geoData" :displayedIds="displayedProjIds"></Map>
+          <Map :geoData="geoData" :displayedIds="displayedProjIds" />>
         </b-col>
       </b-row>
     </b-container>
@@ -58,7 +58,7 @@ export default {
     displayedProjIds() {
       if (this.filterId || this.filterCatogry || this.filterStatus.length > 0) {
         return this.projects.reduce((carry, proj) => {
-          //find Project ID,Status,Category
+          //filter with attr Project ID,Status,Category
           let val = false;
           if (proj["Project ID"] === this.filterId) {
             val = true;
@@ -96,15 +96,9 @@ export default {
       try {
         const res = await this.getGeoDataJson();
         if (res.status === 200) {
-          // const collection = JSON.stringify(res.data, null, '');
-          // const {features,type} = JSON.parse(collection) ;
           const { features, type } = res.data;
-
           this.geoData = { features, type };
-          // features =  features.map((item,index)=>{
-
-          // });
-        } else console.log(res.statusText);
+        } else console.error(res.statusText);
       } catch (e) {
         console.error(e);
       }

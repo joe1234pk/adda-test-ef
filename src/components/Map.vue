@@ -22,7 +22,7 @@ export default {
       geoJsonlayer: configs.MAP_GEO_JSON_LAYER,
       geoStyle: configs.MAP_STYLE,
       mapbox: {}
-    }; // your access token. Needed if you using
+    }; 
   },
   watch: {
     displayedIds() {

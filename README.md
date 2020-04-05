@@ -1,24 +1,35 @@
 # adda-code-test-front
-
+The code in response to test 'Coding challenge for Sr Software Engineer (Frontend)/Technical Lead (UI and Graphics)'
+ref: 'https://bitbucket.org/idda/coding-challenges/src/master/Sr-Software-Engineer-FE.md'
 ## Project setup
 ```
-yarn install
+npm run install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+npm run serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn build
+npm run build
 ```
 
 ### Lints and fixes files
 ```
-yarn lint
+npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+###run unit test
+```
+npm run test:unit
+```
+### Running server
+```
+`VUE_APP_MAP_ACCESS_TOKEN` is required to load Mapbox lib
+
+run command cp .env.example .env and assign `VUE_APP_MAP_ACCESS_TOKEN` with valid token;
+
+and npm run serve
+```
