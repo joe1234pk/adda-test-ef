@@ -21,15 +21,15 @@ npm run build
 npm run lint
 ```
 
-###run unit test
+### Run unit test
 ```
 npm run test:unit
 ```
 ### Running server
-```
+
 `VUE_APP_MAP_ACCESS_TOKEN` is required to load Mapbox lib
 
 run command cp .env.example .env and assign `VUE_APP_MAP_ACCESS_TOKEN` with valid token;
 
 and npm run serve
-```
+
