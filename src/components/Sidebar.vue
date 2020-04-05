@@ -10,9 +10,12 @@
         <VueSelect :options="categories" label="select" v-model="selectedCategories"></VueSelect>
       </b-form-group>
       <b-form-group label="Status">
-        <b-form-checkbox-group id="checkbox-group-2" v-model="selectedStatues" name="flavour-2">
+        <b-form-checkbox-group id="satus-checkbox-group" v-model="selectedStatues" >
           <b-form-checkbox :value="status" v-for="status in statues" :key="status">{{status}}</b-form-checkbox>
         </b-form-checkbox-group>
+      </b-form-group>
+      <b-form-group>
+        <b-button variant="outline-primary" @click="emitUpdate">Filter</b-button>
       </b-form-group>
     </div>
   </div>
@@ -40,9 +43,18 @@ export default {
   data() {
     return {
       selectedStatues: [],
-      selectedId: '',
-      selectedCategories: ''
+      selectedId: null,
+      selectedCategories: null
     };
+  },
+  methods: {
+    emitUpdate() {
+      this.$emit("update-filter", {
+        id: this.selectedId,
+        category: this.selectedCategories,
+        statues: [...this.selectedStatues]
+      });
+    }
   }
 };
 </script>
